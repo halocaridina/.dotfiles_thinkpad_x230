@@ -1,0 +1,99 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+        colors = true
+        interval = 5
+        color_good = "#8AE234"
+        color_degraded = "#FCE94F"
+        color_bad = "#EF2929"
+}
+
+order += "path_exists SCREEN_LOCK"
+order += "run_watch VPN"
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "disk /"
+order += "disk /home"
+order += "battery 0"
+order += "cpu_usage"
+order += "cpu_temperature 0"
+order += "load"
+order += "volume master"
+order += "tztime local"
+
+path_exists SCREEN_LOCK {
+         path = "/tmp/screen_lock_toggled_off.pid"
+         color_good = "#FCE94F"
+         color_bad = "#222222"
+         format = ""
+}
+
+volume master {
+        format = ": %volume"
+        format_muted = ": M (%volume)"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
+
+run_watch VPN {
+        color_good = "#34E2E2"
+        color_bad = "#222222"
+        format = ""
+        pidfile = "/var/run/NetworkManager/nm-vpnc-c4014199-aa4a-49a8-8918-c02c5c70b302.pid"
+}
+
+
+wireless _first_ {
+        format_up = ": %essid @ %quality (%ip)"
+        format_down = ""
+}
+
+ethernet _first_ {
+        format_up = ": %ip"
+        format_down = ""
+}
+
+battery 0 {
+        low_threshold = 10
+        threshold_type = "percentage"
+        integer_battery_capacity = true
+        hide_seconds = true
+        format = "%status %percentage %remaining %consumption"
+        status_chr = ":"
+        status_bat = ":"
+        status_full = ":"
+}
+
+tztime local {
+        format = ": %Y-%m-%d %r"
+}
+
+cpu_usage {
+    format = ": %usage"
+    }
+
+load {
+        format = ": %1min"
+        max_threshold = "2"
+}
+
+disk "/" {
+        format = ": %percentage_used"
+}
+
+disk "/home" {
+        format = ": %percentage_used"
+}
+
+cpu_temperature 0 {
+        format = ": %degrees°C"
+        path = "/sys/devices/platform/coretemp.0/temp2_input"
+#        path = "/sys/devices/platform/coretemp.0/hwmon/hwmon0/temp2_input"
+}

@@ -1,0 +1,11 @@
+bin
+share/newsbeuter
+share/webkit/databases
+share/recently-used.xbel
+share/mc/history
+share/keyrings
+share/zathura/*
+share/xorg/*
+share/applications/*
+share/luakit*
+share/fonts/PragmataPro/*

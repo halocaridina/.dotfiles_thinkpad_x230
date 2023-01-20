@@ -1,0 +1,33 @@
+#*****************************************************************#
+# Set the Prezto modules to load (browse modules).
+# The order matters.
+zstyle ':prezto:load' pmodule \
+  'environment' \
+  'terminal' \
+  'history' \
+  'directory' \
+  'utility' \
+  'completion' \
+  'osx' \
+  'git' \
+  'homebrew' \
+  'syntax-highlighting' \
+  'history-substring-search' \
+  'prompt'
+
+# Set the Zsh modules to load (man zshmodules).
+zstyle ':prezto:load' zmodule 'attr' 'stat'
+
+# Set the Zsh functions to load (man zshcontrib).
+zstyle ':prezto:load' zfunction 'zargs' 'zmv'
+
+# Set case-sensitivity for completion, history lookup, etc.
+zstyle ':prezto:*:*' case-sensitive 'yes'
+
+# Set prompt
+zstyle ':prezto:module:prompt' theme 'paradox_santos'
+
+# Auto convert .... to ../..
+zstyle ':prezto:module:editor' dot-expansion 'yes'
+
+#*****************************************************************#

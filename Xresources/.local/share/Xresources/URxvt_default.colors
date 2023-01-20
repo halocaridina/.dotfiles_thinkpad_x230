@@ -1,0 +1,44 @@
+! Enable vivid colors
+URxvt.intensityStyles: true
+
+URxvt*background: #090C19
+URxvt*foreground: gray
+URxvt*cursorColor: gray
+
+! black/dark grey
+URxvt*color0: #222946
+URxvt*color8: #8C8B89
+
+! red/ bright red
+URxvt*color1: #B32323
+URxvt*color9: #DC2C2C
+
+! green/bright green
+URxvt*color2: #1AAA13
+URxvt*color10: #5DCE33
+
+! yellow/bright yellow
+URxvt*color3: #FF9F3E
+URxvt*color11: #E6CB29
+
+! blue/bright blue
+URxvt*color4: #4957F3
+URxvt*color12: #4D79FF
+
+! magenta/bright magenta
+URxvt*color5: #BF3E94
+URxvt*color13: #B641CC
+
+! cyan/bright cyan
+!URxvt*color6: #09A5B3
+!URxvt*color14: #3CB6F3
+
+! cyan
+URxvt*color6:    #06989a
+URxvt*color14:   #34e2e2
+
+
+! light grey/white
+URxvt*color7: #AEAEAE
+URxvt*color15: #DBDDE4
+

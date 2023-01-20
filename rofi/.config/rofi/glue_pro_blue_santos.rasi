@@ -1,0 +1,167 @@
+/******************************************************************************
+ * ROFI Color theme
+ * User: Rasi
+ * Copyright: Rasmus Steinke
+******************************************************************************/
+
+* {
+    selected-normal-foreground:  rgba ( 255, 255, 255, 100 % );
+    foreground:                  rgba ( 255, 255, 255, 100 % );
+    normal-foreground:           @foreground;
+    alternate-normal-background: rgba ( 78, 78, 78, 40% );
+    red:                         rgba ( 220, 50, 47, 100 % );
+    selected-urgent-foreground:  rgba ( 255, 255, 255, 100 % );
+    blue:                        rgba ( 57, 120, 180, 100 % );
+    urgent-foreground:           rgba ( 255, 0, 0, 100 % );
+    alternate-urgent-background: rgba ( 57, 57, 57, 40 % );
+    active-foreground:           rgba ( 38, 139, 210, 100 % );
+    lightbg:                     rgba ( 238, 232, 213, 100 % );
+    selected-active-foreground:  rgba ( 32, 81, 113, 100 % );
+    alternate-active-background: rgba ( 57, 57, 57, 40 % );
+    background:                  rgba ( 57, 57, 57, 95 % );
+    bordercolor:                 rgba ( 78, 78, 78, 40% );
+    alternate-normal-foreground: @foreground;
+    normal-background:           rgba ( 57, 57, 57, 40 % );
+    lightfg:                     rgba ( 88, 104, 117, 100 % );
+    selected-normal-background:  rgba ( 57, 120, 180, 100 % );
+    border-color:                @foreground;
+    spacing:                     2;
+    separatorcolor:              rgba ( 57, 120, 180, 70 % );
+    urgent-background:           rgba ( 57, 57, 57, 40 % );
+    selected-urgent-background:  rgba ( 255, 0, 0, 40 % );
+    alternate-urgent-foreground: @urgent-foreground;
+    background-color:            rgba ( 0, 0, 0, 0 % );
+    alternate-active-foreground: @active-foreground;
+    active-background:           rgba ( 57, 57, 57, 100 % );
+    selected-active-background:  rgba ( 57, 120, 180, 100 % );
+}
+
+#configuration {
+
+    // The display icon for SSH
+    display-ssh:                    "";
+    // The display icon for running an app
+    display-run:                    "";
+    // The display icon for running an app
+    display-drun:                   "";
+    // The display icons for windows
+    display-window:                 "";
+    display-combi:                  "";
+    show-icons: false;
+}
+
+#window {
+    background-color: @background;
+    transparency:     "screenshot";
+    border:           0px;
+    padding:          180px;
+    width:            100%;
+    height:           100%;
+}
+#mainbox {
+    border:  0;
+    padding: 0;
+}
+#message {
+    border:       1px dash 0px 0px ;
+    border-color: @separatorcolor;
+    padding:      1px ;
+}
+#textbox {
+    text-color: @foreground;
+}
+#listview {
+    fixed-height: 0px;
+    border:       2px dash 0px 0px ;
+    border-color: @separatorcolor;
+    spacing:      2px ;
+    scrollbar:    true;
+    padding:      2px 0px 0px ;
+}
+#element {
+    border:  0;
+    padding: 1px;
+}
+#element.normal.normal {
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
+}
+#element.normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+#element.normal.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+}
+#element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+#element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @selected-urgent-foreground;
+}
+#element.selected.active {
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
+}
+#element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+#element.alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color:       @alternate-urgent-foreground;
+}
+#element.alternate.active {
+    background-color: @alternate-active-background;
+    text-color:       @alternate-active-foreground;
+}
+#scrollbar {
+    width:        4px ;
+    border:       0px;
+    handle-width: 8px ;
+    padding:      0px;
+}
+#sidebar {
+    border:       2px dash 0px 0px ;
+    border-color: @separatorcolor;
+    padding:      6px;
+}
+#button.normal {
+    text-color: rgba ( 255, 255, 255, 30% );
+}
+#button.selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+#inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+    spacing:    0px;
+    text-color: @normal-foreground;
+    padding:    2px ;
+}
+#case-indicator {
+    spacing:    0px;
+    text-color: @normal-foreground;
+}
+#entry {
+    spacing:    0px;
+    text-color: @normal-foreground;
+}
+#prompt {
+    spacing:    0px;
+    text-color: @normal-foreground;
+}
+#textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @normal-foreground;
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}

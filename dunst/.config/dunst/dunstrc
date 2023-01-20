@@ -1,0 +1,81 @@
+[global]
+    markup = yes
+    font = "Roboto Mono Medium for Powerline 14"
+    format = "<span font="Roboto Mono Medium for Powerline 14">%s</span>\n<span font="Roboto Mono for Powerline Regular 10">%b</span>"
+    alignment = center
+
+    follow = keyboard
+    origin = top-right
+    offset = 10x30
+    width = 400
+    height = 300
+    horizontal_padding = 8
+    idle_threshold = 120
+    ignore_newline = false
+    indicate_hidden = false
+    line_height = 0
+    monitor = 0
+    padding = 8
+    show_age_threshold = 60
+    show_indicators = true
+    shrink = no
+    sticky_history = true
+    sort = yes
+    transparency = 5
+    word_wrap = yes
+
+    icon_position = left
+##    enable_recursive_icon_lookup = true
+##    icon_theme = "Papirus-Dark, Papirus"
+    icon_path = /home/srsantos/.config/dunst/icons
+    max_icon_size = 96
+
+    frame_width = 1
+    frame_color = "#323232"
+    separator_color = "#1A1A1A"
+    separator_height = 4
+    ellipsize = middle
+
+    browser = /usr/bin/luakit
+    dmenu = SSH_AUTH_SOCK=/run/user/1000/gnupg/S.gpg-agent.ssh /usr/bin/rofi -dmenu -p 
+
+    stack_duplicates = true
+    hide_duplicate_count = false
+    corner_radius = 8
+
+[urgency_low]
+    background = "#222222"
+    foreground = "#BBBBBB"
+    timeout = 8
+
+[urgency_normal]
+    background = "#222222"
+    foreground = "#BBBBBB"
+    timeout = 8
+
+[urgency_critical]
+    background = "#770000"
+    foreground = "#EEEEEE"
+    frame_color = "#1B1B1B"
+    timeout = 0
+
+[Xfce volume daemon]
+    appname = Xfce volume daemon
+    format = "<span font="Roboto Mono for Powerline Regular 14">%s</span><span font="Roboto Mono for Powerline Regular 10">%b</span>"
+
+[pasystray]
+    appname = pasystray
+    format = "<span font="Roboto Mono for Powerline Regular 14">%s</span><span font="Roboto Mono for Powerline Regular 10">%b</span>"
+    new_icon = /home/srsantos/.config/dunst/icons/pasystray_bw.png
+
+[update_arch_notification.sh]
+    summary = "No updates for Archlinux"
+    format = "<span font="Roboto Mono for Powerline Regular 14">%s</span><span font="Roboto Mono for Powerline Regular 10">%b</span>"
+
+[update_aur_notification.sh]
+    summary = "No updates from AUR"
+    format = "<span font="Roboto Mono for Powerline Regular 14">%s</span><span font="Roboto Mono for Powerline Regular 10">%b</span>"
+
+[ChangeBrightness]
+    appname = ChangeBrightness
+    format = "<span font="Roboto Mono for Powerline Regular 14">%s</span><span font="Roboto Mono for Powerline Regular 10">%b</span>"

@@ -1,0 +1,8 @@
+! Comma separated list of font names that are checked in order when trying to find glyphs for characters.
+
+URxvt*font: -*-terminus-*-*-*-*-12-*-*-*-*-*-*-*
+URxvt*boldFont: -*-terminus-*-*-*-*-12-*-*-*-*-*-*-*
+URxvt*italicFont: -*-terminus-*-*-*-*-12-*-*-*-*-*-*-*
+URxvt*boldItalicFont: -*-terminus-*-*-*-*-12-*-*-*-*-*-*-*
+URxvt*letterSpace: 0
+URxvt.lineSpace: 0

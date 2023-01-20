@@ -1,0 +1,49 @@
+# GENERAL BEHAVIORS
+#set font "Roboto Condensed, Regular 11"
+#set font "Roboto Condensed, Regular 14px"
+set font "Roboto Mono for Powerline, Regular 9"
+set adjust-open "width"
+set scroll-wrap "false"
+set abort-clear-search "true"
+set highlight-color "#FFFF00"
+set highlight-active-color "#FF0000"
+set database "null"
+set statusbar-home-tilde "true"
+set window-title-home-tilde "true"
+# COLORIZE THE PDF ITSELF
+# set recolor-darkcolor "#93A1A1"
+# set recolor-lightcolor "#002B36"
+# set recolor true
+# COLORS FOR FG/BG & BARS
+set statusbar-bg "#000000"
+set statusbar-fg "#BABDB6"
+set default-fg "#FFFFFF"
+set default-bg "#000000"
+set inputbar-bg "#396EB4"
+set inputbar-fg "#FFFFFF"
+# KEYBINDINGS
+map a adjust_window "best-fit"
+map z adjust_window "width"
+map p rotate "rotate-cw"
+map u reload
+map f follow
+map <Tab> toggle_index
+map <Return> toggle_inputbar
+map <S-Return> toggle_statusbar
+map <Space> toggle_fullscreen
+map <C-q> quit
+map [fullscreen] a adjust_window best-fit
+map [fullscreen] z adjust_window width
+map [fullscreen] p rotate rotate-cw
+map [fullscreen] u reload
+map [fullscreen] f follow
+map [fullscreen] <Tab> toggle_index
+map [fullscreen] <Return> toggle_inputbar
+map [fullscreen] <S-Return> toggle_statusbar
+map [fullscreen] <Space> toggle_fullscreen
+map [fullscreen] <C-q> quit
+map [index] e navigate_index expand
+map [index] c navigate_index collapse
+map [index] E navigate_index expand-all
+map [index] C navigate_index collapse-all
+

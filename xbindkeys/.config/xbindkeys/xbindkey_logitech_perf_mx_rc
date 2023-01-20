@@ -1,0 +1,29 @@
+######################
+# MX Master Settings #
+######################
+
+# thumb wheel up => change browser tab to right
+"xte 'keydown Control_L' 'key Right' 'keyup Control_L'"
+   b:6
+
+# thumb wheel down => change browser tab to left
+"xte 'keydown Control_L' 'key Left' 'keyup Control_L'"
+   b:7
+
+# backward button => previous i3 workspace
+"xte 'keydown Super_L' 'key comma' 'keyup Super_L'"
+   b:8
+
+# forward button => next i3 workspace
+"xte 'keydown Super_L' 'key period' 'keyup Super_L'"
+   b:9
+
+# thumb button => jump to urgent i3 workspace
+# We need a sleep here since the button triggers a few more key codes (wtf?).
+# It also triggers Control+Mod2+Control_L and Alt+Mod2+Alt_L. The sleep
+# prevents that X receives those keypresses simultaniously. Therefore they
+# might interfere and trigger unwanted actions. By the sleep we make sure that
+# the Alt+Left is receive as distinct event.
+
+"sleep 0.1 && xte 'keydown Super_L' 'key x' 'keyup Super_L'"
+   Control+Alt+Mod2 + Tab

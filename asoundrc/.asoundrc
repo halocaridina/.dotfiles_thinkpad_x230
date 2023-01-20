@@ -1,0 +1,7 @@
+# Below will redirect sound to HDMI
+# Uncomment and alsactl nrestore
+#pcm.!default {
+#    type hw
+#    card 0
+#    device 3
+#}

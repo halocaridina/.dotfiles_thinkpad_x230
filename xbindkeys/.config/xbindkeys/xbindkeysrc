@@ -1,0 +1,15 @@
+##########################
+# M705 Logitech Settings #
+##########################
+
+# backward button => previous i3 workspace
+"xte 'keydown Super_L' 'key comma' 'keyup Super_L'"
+   b:8
+
+# forward button => next i3 workspace
+"xte 'keydown Super_L' 'key period' 'keyup Super_L'"
+   b:9
+
+# thumb button => cycle through luakit tabs
+"xte 'keydown Control_L' 'key Prior' 'keyup Control_L'"
+  b:10

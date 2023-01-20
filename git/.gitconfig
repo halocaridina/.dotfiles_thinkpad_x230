@@ -1,0 +1,14 @@
+[user]
+	email = santos@auburn.edu
+	name = Scott R. Santos
+	signingkey = halocaridina@gmail.com
+[color]
+	ui = true
+[core]
+	editor = vim
+[push]
+	default = simple
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = master

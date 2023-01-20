@@ -1,0 +1,65 @@
+## Configurations ##
+## Use cut to end of line with ^K by default
+set cutfromcursor
+
+## Line length for wrapping text and justifying paragraphs
+set fill -8
+
+## Display line numbers
+set linenumbers
+
+## Autoindent
+## set autoindent
+
+## Display the current position
+set constantshow
+
+## Case-sensitive searching
+set casesensitive
+
+## Don't convert files from DOS/Mac format
+set noconvert
+
+## Don't wrap text at all
+## set nowrap
+
+## Use smooth scrolling as the default
+## set smooth
+
+## Use this spelling checker instead of the internal one.  This option does not properly have a default value.
+set speller "aspell -c"
+
+## Allow nano to be suspended with ^Z
+## set suspend
+
+## For DNA sequence in FASTA format
+syntax "fasta" "\.fasta$" "\.fas$"
+color brightwhite "^\>.*"
+color brightgreen "[Aa]"
+color brightred "[Tt]"
+color brightblue "[Cc]"
+color brightyellow "[Gg]"
+
+## For DNA sequence in NEXUS/PAUP format
+syntax "nexus" "\.nexus$" "\.nex$"
+color brightgreen "[Aa]"
+color brightred "[Tt]"
+color brightblue "[Cc]"
+color brightyellow "[Gg]"
+color brightwhite "(^[ 	])\{?[0-9A-Z_!@#$*?-]+\}?"
+color brightwhite  start="\[" end="\]"
+color brightred "(#NEXUS|End|;)"
+color brightyellow "(Dimensions|Format|Matrix)"
+color brightcyan "(Begin DATA|ntax|nchar|datatype|gap)"
+color brightred "\=\{?[0-9A-Z_!@#$*?-]+\}?"
+
+## include language-specific hightlighting configs
+# include ~/.nano/*.nanorc
+
+## Colorize interface
+set titlecolor brightwhite,blue
+set statuscolor brightwhite,blue
+set numbercolor brightblue
+set keycolor brightyellow
+set functioncolor brightblue
+

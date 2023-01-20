@@ -1,0 +1,8 @@
+#include "/home/srsantos/.local/share/Xresources/xft.fonts"
+
+#include "/home/srsantos/.local/share/Xresources/URxvt_terminus.fonts"
+#include "/home/srsantos/.local/share/Xresources/URxvt_default.settings"
+#include "/home/srsantos/.local/share/Xresources/URxvt_default.colors"
+
+#include "/home/srsantos/.local/share/Xresources/rofi.config"
+
