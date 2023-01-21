@@ -1,23 +1,30 @@
 local utils = require "mp.utils"
 
-local cover_filenames = { "cover.png", "cover.jpg", "cover.jpeg",
-                          "folder.jpg", "folder.png", "folder.jpeg",
-                          "AlbumArtwork.png", "AlbumArtwork.jpg", "AlbumArtwork.jpeg" }
+local cover_filenames = { "folder.jpg", "folder.png", "front.jpg", "front.png",
+                          "Folder.jpg", "Folder.png", "Front.jpg", "Front.png",
+                          "cover.png", "cover.jpg", "cover.jpeg",
+                          "Cover.png", "Cover.jpg", "Cover.jpeg",
+                          "Art.jpg", "art.jpg", "Art.png", "Art.jpg",
+                          "Album.jpg", "album.jpg", "Album.png", "album.png"}
 
 function notify(summary, body, options)
+    if summary == "" and body == "" then return end
     local option_args = {}
     for key, value in pairs(options or {}) do
         table.insert(option_args, string.format("--%s=%s", key, value))
     end
     return mp.command_native({
-        "run", "notify-send", "-r","10",unpack(option_args),
+        "run", "dunstify",
+        "--appname=mpv_music",
+        "--replace=111",
+        unpack(option_args),
         summary, body,
     })
 end
 
 function escape_pango_markup(str)
-    return string.gsub(str, "([\"'<>&])", function (char)
-        return string.format("&#%d;", string.byte(char))
+    return string.gsub(str, "([\"<>])", function (char)
+        return string.format("'", string.byte(char))
     end)
 end
 
@@ -82,7 +89,7 @@ function notify_current_media()
     -- hooking off existing desktop thumbnails would be good too
     local thumbnail = find_cover(dir)
 
-    local title = file
+    local title = mp.get_property_native("media-title") or file
     local origin = dir
 
     local metadata = mp.get_property_native("metadata")
@@ -99,7 +106,7 @@ function notify_current_media()
             origin = string.format("%s — %s", origin, album)
         end
 
-        local year = tag("original_year") or tag("year")
+        local year = tag("original_year") or tag("year") or tag("date")
         if year then
             origin = string.format("%s (%s)", origin, year)
         end
