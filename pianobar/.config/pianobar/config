@@ -1,0 +1,13 @@
+act_help = ?
+
+format_nowplaying_song = [01;38;5;71m"%t"[0m by [01;36m%a[0m on [01;38;5;33m"%l"[0m
+format_nowplaying_station = Station [01;38;5;226m%n[0m
+format_list_song = %i) %a - %t%r
+
+audio_quality = high
+##autostart_station = stationid
+
+user = halocaridina@gmail.com
+password_command = /usr/bin/gpg2 --decrypt ~/.config/pianobar/pandora_pswd.gpg
+
+event_command = /home/srsantos/.config/pianobar/pianobar-notify.sh
