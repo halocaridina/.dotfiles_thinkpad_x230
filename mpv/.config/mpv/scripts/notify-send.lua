@@ -24,7 +24,7 @@ end
 
 function escape_pango_markup(str)
     return string.gsub(str, "([\"<>])", function (char)
-        return string.format("'", string.byte(char))
+        return string.format("&#%d;", string.byte(char))
     end)
 end
 
