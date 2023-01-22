@@ -123,7 +123,6 @@ alias battery_level='cat /sys/class/power_supply/BAT0/uevent | grep POWER_SUPPLY
 alias i3_exit='i3-msg exit'
 alias sys-info='inxi -Fxz'
 alias screenfetch='neofetch'
-### alias nano='vim'
 alias less='less -e -i -M -R -q'
 alias sm_readers_ls='opensc-tool -l'
 
@@ -133,8 +132,8 @@ alias rm_DS_Stores='find . -name ".DS_Store" -delete'
 
 alias pulseaudio-ctl='/usr/local/bin/pulseaudio-ctl_local'
 
-alias music_mpv='mpv --no-video'
-alias music_mpv_random_playlist='mpv --no-video --shuffle --playlist <(find "$PWD" -type f)'
+alias music_mpv_random_playlist="/usr/bin/termite --title music_mpv --hold --exec '/usr/bin/mpv --no-video --shuffle /home/srsantos/Music' &"
+##alias music_mpv_random_playlist='mpv --no-video --shuffle --playlist <(find "$PWD" -type f)'
 
 alias webcam_screenshot='mpv av://v4l2:/dev/video0'
 alias webcam_mencoder_video='mencoder tv:// -tv driver=v4l2:width=640:height=480:device=/dev/video0:forceaudio:immediatemode=0:alsa:adevice=hw.0,0 -ofps 30 -ovc lavc -lavcopts vcodec=mjpeg -oac mp3lame -lameopts cbr:br=64:mode=3 -o'
