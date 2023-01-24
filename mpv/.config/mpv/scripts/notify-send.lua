@@ -57,14 +57,14 @@ function find_cover(dir)
         dir = utils.join_path(utils.getcwd(), dir)
     end
     local path = mp.get_property_native("path")
-    local cmd = string.format("ffprobe -i '%s' -show_streams -select_streams v -v quiet", path)
+    local cmd = string.format([[ffprobe -i "%s" -show_streams -select_streams v -v quiet]], path)
     local handle = io.popen(cmd)
     local result = handle:read("*a")
     handle:close()
     
     if result ~= "" then
         local art_file = "/tmp/cover.png"
-        local cmd = string.format("ffmpeg -i '%s' -v -8 -y -an -vcodec png '%s'", path, art_file)
+        local cmd = string.format([[ffmpeg -i "%s" -v -8 -y -an -vcodec png "%s"]], path, art_file)
         os.execute(cmd)
         return art_file
     end
