@@ -57,7 +57,7 @@
     progress_bar_max_width = 400
 
     # Corner radius for the progress bar. 0 disables rounded corners.
-    progress_bar_corner_radius = 0
+    # progress_bar_corner_radius = 0
 
     browser = /usr/bin/luakit
     dmenu = SSH_AUTH_SOCK=/run/user/1000/gnupg/S.gpg-agent.ssh /usr/bin/rofi -dmenu -p 

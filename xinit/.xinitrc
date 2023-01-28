@@ -29,10 +29,11 @@ dbus-update-activation-environment --all
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets)
 export SSH_AUTH_SOCK
 
-# Finally start a WM of your choice, with i3 bling being the default
+# Finally start a WM of your choice, with i3 bling being the default - add following to collect logs:
+# -V >> /tmp/i3log-$(date +'%F-%k-%M-%S') 2>&1
 case $WM in
 i3)
-    exec /usr/bin/i3 -c /home/srsantos/.i3/bling.conf -V >> /tmp/i3log-$(date +'%F-%k-%M-%S') 2>&1
+    exec /usr/bin/i3 -c /home/srsantos/.i3/bling.conf
     ;;
 i3-bones)
     exec /usr/bin/i3 -c /home/srsantos/.i3/bones.conf

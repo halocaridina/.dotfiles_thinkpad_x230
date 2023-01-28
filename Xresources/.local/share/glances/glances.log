@@ -1,0 +1,16 @@
+2023-01-24 15:06:54,976 -- INFO -- Start Glances 3.3.0
+2023-01-24 15:06:54,976 -- INFO -- CPython 3.10.9 (/usr/bin/python) and psutil 5.9.4 detected
+2023-01-24 15:06:54,991 -- INFO -- Read configuration file '/usr/share/doc/glances/glances.conf'
+2023-01-24 15:06:55,020 -- INFO -- Start GlancesStandalone mode
+2023-01-24 15:06:55,045 -- WARNING -- Missing Python Lib (No module named 'py3nvml'), Nvidia GPU plugin is disabled
+2023-01-24 15:06:55,048 -- WARNING -- Missing Python Lib (No module named 'wifi'), Wifi plugin is disabled
+2023-01-24 15:06:55,048 -- WARNING -- Wifi lib is not compliant with Python 3, Wifi plugin is disabled
+2023-01-24 15:06:55,050 -- WARNING -- Missing Python Lib (No module named 'pymdstat'), Raid plugin is disabled
+2023-01-24 15:06:55,054 -- WARNING -- Missing Python Lib (No module named 'requests'), Ports plugin is limited to port scanning
+2023-01-24 15:06:55,059 -- WARNING -- Missing Python Lib (No module named 'pySMART'), HDD Smart plugin is disabled
+2023-01-24 15:06:55,066 -- WARNING -- Missing Python Lib (No module named 'requests'), Cloud plugin is disabled
+2023-01-24 15:06:55,071 -- WARNING -- Sparklines module not found (No module named 'sparklines')
+2023-01-24 15:06:55,077 -- WARNING -- Error loading Docker deps Lib. Docker plugin is disabled (No module named 'docker')
+2023-01-24 15:06:55,077 -- ERROR -- docker plugin - Can not connect to Docker (name 'docker' is not defined)
+2023-01-24 15:06:55,083 -- WARNING -- Missing Python Lib (No module named 'requests'), cannot load nginx AMP
+2023-01-24 15:07:25,246 -- INFO -- Stop Glances (keypressed: 113)
